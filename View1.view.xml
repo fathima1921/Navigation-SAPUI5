@@ -1,0 +1,21 @@
+<mvc:View controllerName="databindingnavigation.controller.View1"
+    xmlns:mvc="sap.ui.core.mvc" displayBlock="true"
+    xmlns="sap.m"
+    xmlns:form="sap.ui.layout.form">
+    <Shell id="shell">
+    <App id="app" class="myAppDemoWT">
+        <Page id="page" title="{i18n>title}">
+        <Panel id="panel" headerText="{i18n>panelHeaderText}" class="sapUiResponsiveMargin" width="1000px" height="500px">
+            <form:SimpleForm id="sform" editable="true" layout="ColumnLayout">
+                <Label id="label1" text="First Name"/>
+                <Input id="input1" value="{/firstName}" valueLiveUpdate="true" width="200px" enabled="{/enabled}"/>
+                <Label id="label2" text="Last Name"/>
+                <Input id="input2" value="{/lastName}" valueLiveUpdate="true" width="200px" enabled="{/enabled}"/>
+                <Label id="label3"/>
+                <Button id="btn" text="Submit"  width="100px" press="submit"  class="myCustomButton"/>
+            </form:SimpleForm>
+        </Panel>                                         
+        </Page>
+    </App>
+</Shell>
+</mvc:View>  

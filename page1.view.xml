@@ -1,0 +1,39 @@
+<mvc:View
+	controllerName="databindingnavigation.controller.page1"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns="sap.m"
+	displayBlock="true"
+	height="100%"
+	busyIndicatorDelay="0"
+	xmlns:tnt="sap.tnt"
+>
+<Page id="page1" title="{i18n>title}">
+	<tnt:ToolHeader id="hdr">
+                <Button id="btn" type="Back" press="onInit" icon="sap-icon://Back" />
+                <ToolbarSpacer id="toobar1" />
+                <Text id="text" text="Page1">
+                </Text>
+                <ToolbarSpacer id="toobar2" />
+                <Toolbar id="toolbar">
+                    <SearchField id="srchfld" width="100%" />
+                </Toolbar>
+            </tnt:ToolHeader>
+<content>
+	<Text id="text1" text="First Name:"></Text>
+    <Input id="fname"
+      value="{/name/firstname}"
+      description=" {/name/firstname}"
+      valueLiveUpdate="true"
+      width="10%"/>
+	  <Text id="text2" text="last Name:"></Text>
+	  <Input id="lname"
+      value="{/name/lastname}"
+      description=" {/name/lastname}"
+      valueLiveUpdate="true"
+      width="10%"/>
+
+      <Text id="txt1" text="{ path: '/name', formatter: '.formatGreeting' }" />
+
+</content>
+</Page>
+</mvc:View>
